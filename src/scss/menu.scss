@@ -1,0 +1,318 @@
+.menu-body {
+    $menu_h: 50px;
+    height: $menu_h;
+    background-color: #2d2f32;
+    z-index: 6;
+    position: relative;
+}
+
+.menu-body li {
+  list-style-type: none; 
+  margin: 0 5px;
+ }
+
+.menu__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__objects {
+    width: 180px;
+    color: #000;
+    text-align: center;
+    background-color: #fac23a;
+    height: 100%;
+    font-size: 14px;
+    padding: auto;
+    font-weight: bold;
+    padding: 20px 0;
+    @include adaptiveValue("width", 180, 100);
+}
+
+@media (max-width: 564px) {
+    
+    .menu__callback p {
+      letter-spacing: -0.5px;
+      padding: 0px 0 0px 12px;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+    .menu__callback {
+        @include adaptiveValue("font-size", 14, 10);
+    }
+}
+.menu__objects:hover, .menu__callback:hover {
+    filter: brightness(1.1);
+}
+
+.menu__callback {
+    background-color: #01b651;
+    height: 100%;
+    display: flex;
+    width: 188px;
+    padding: 5px 28px 5px 23px;
+    font-size: 12px;
+    color: #fff;
+}
+.menu__callback p {
+    // padding-left: 10px;
+    letter-spacing: -0.5px;
+    padding: 6px 0 5px 12px;
+    line-height: 1.2;
+}
+.menu__callback div {
+    padding: 5px 2px;
+    width: 50px;
+}
+.menu_nav {
+  align-items: center;
+    height: 100%;
+  display: flex;
+    
+}
+.menu_nav a{
+    color: #fff;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+  
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+
+
+  .mobile__nav, .menuToggle, .header__nav.nav-bar {
+    display: none;
+  }
+  /* Nav  */
+
+#nav {
+    // background-color: #f2f2f2;
+    z-index: 4;
+    // margin-bottom: 50px;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1076px) {
+  .menu_nav {
+    display: none;
+   }
+   .toggle-menu {
+    display: block;
+  }
+/// animated burger 
+#toggle {
+  display: block;
+  // width: 28px;
+  // height: 30px;
+  // margin: 30px auto 10px;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#toggle span:after{
+  top: 9px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+  /// nav 
+  .nav-bar {
+    background-color: #2d2f32e3;
+    top: 0;
+    right: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: position 2.9s;
+    -webkit-transition: position 2.9s;
+    -moz-transition: position 2.9s;
+    -ms-transition: position 2.9s;
+    -o-transition: position 2.9s;
+  }
+  
+  .toggle {
+    display: block;
+  }
+  
+  .toggle-menu {
+    background-color: rgba(0, 0, 0, 0.2);
+    // position: fixed;
+    // top: 20px;
+    // right: 20px;
+    width: 35px;
+    // height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+      padding: 2px 2px 2px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  .line {
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.2s ease-out;
+    -webkit-transition: transform 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out;
+    -ms-transition: transform 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out;
+  }
+  
+  .toggle .line1 {
+    background-color: #000000;
+    transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+  }
+  
+  .toggle .line2 {
+    display: none;
+  }
+  
+  .toggle .line3 {
+    background-color: #000000;
+    transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+  }
+  
+  .toggle .toggle-menu {
+    background-color: white;
+  }
+  
+  .nav-list {
+    list-style: none;
+  }
+  
+  .nav-list-item {
+    text-align: -webkit-left;
+    padding: 15px 0;
+    padding-left: 20px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+  }
+  
+  .nav-link::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: left;
+    -webkit-transition: transform 0.4s ease-in-out;
+    -moz-transition: transform 0.4s ease-in-out;
+    -ms-transition: transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-link:hover::before {
+    transform: scaleX(1);
+  }
+
+  .header__nav.nav-bar.toggle {
+    display: block;
+  }
+  ///////////// end
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .menu__callback {
+      padding-right: 10px;
+        @include adaptiveValue("padding-rigth", 28, 5, 991, 320);
+        @include adaptiveValue("padding-left", 23, 5, 991, 320);
+        @include adaptiveValue("width", 188, 147);
+        @include adaptiveValue("font-size", 14, 10);
+    }
+    .menu__callback div {
+        min-width: 30px;
+    }
+    .menu_nav{
+     right: 180px;
+    }
+    .menu_nav.responsive {
+        right: 180px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu_nav{
+        right: 160px;
+       }
+       .menu_nav.responsive {
+           right: 160px;
+       }
+       .menu__objects span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+.menu_nav.responsive a {
+    padding: 20px 10px;
+}
+}
+/* Nav end */
+
+.sticky + main {
+    padding-top: 50px;
+  }

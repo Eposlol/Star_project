@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{"title":"Главная"})
+<body>
+<div class="wrapper" data-sticky>
+@@include('html/_header.htm',{})
+@@include('html/_menu.htm',{})
+<main class="page">
+    <section>
+        <div class="grass__banner" id="grass__banner">
+            <div class="overlay"></div>
+        <video autoplay="true" muted="true" playsinline="true" loop="true" poster="true" id="myVideo">
+                <source type="video/webm" src="@img/land.webm">
+                <source type="video/mp4" src="@img/land.mp4">
+          </video>
+          <div class="grass-content__container">
+            <div class="grass-content__header"><h1>Верхневолжские Просторы</h1></div>
+            <div class="grass-content__text">Это участки и жилые дома с великолепными видами, развитой инфраструктурой и всеми необходимыми коммуникациями</div>
+            <div class="grass-content__items">
+                <a href="#" >
+                    <div class="grass-content__items-img"><img class="-ibg" src="@img/1.png" alt=""></div>
+                    <div class="grass-content__items-block">
+                        <div class="grass-content__items-number"><p>2013</p></div>
+                        <div class="grass-content__items-text">год основания компании</div>
+                    </div>
+                </a>
+                <a href="#">
+                   <div class="grass-content__items-img"><img class="-ibg" src="@img/2.png" alt=""></div>
+                    <div class="grass-content__items-block">
+                        <div class="grass-content__items-number"><p>7</p></div>
+                        <div class="grass-content__items-text">созданных поселков</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="grass-content__items-img"><img class="-ibg" src="@img/4.png" alt=""></div>
+                    <div class="grass-content__items-block">
+                        <div class="grass-content__items-number"><p>1070</p></div>
+                        <div class="grass-content__items-text">га. в развитии</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="grass-content__items-img"><img class="-ibg" src="@img/4.png" alt=""></div>
+                    <div class="grass-content__items-block">
+                        <div class="grass-content__items-number"><p>617</p></div>
+                        <div class="grass-content__items-text">проданных участков</div>
+                    </div>
+                </a>
+            </div>
+          </div>
+        </div>
+        </section>
+        <section>
+            <div class="objects">
+                <div class="objects__container">
+                    <div class="objects__header"><h1>Наши объекты</h1></div>
+                        <div class="objects__items">
+                            <a href="#" class="objects__item" >
+                                <div class="objects__item-bg" style="background-image: url(@img/savatievskiu_bereg.jpg)"></div>
+                                <div class="objects__item-text">
+                                    <p>Саватьевский</p>
+                                    <p>берег</p>
+                                </div>
+                            </a>
+                
+                            <a href="#" class="objects__item" >
+                                <div class="objects__item-bg" style="background-image: url(@img/poselok_pribregniy.jpg);"></div>
+                                <div class="objects__item-text">
+                                    <p>Поселок</p>
+                                    <p>прибрежный</p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="map-block">
+                <div class="map-block__container">
+                    <div class="map-block__header">
+                        <h1>Выбирайте где Вы хотите строить свой дом</h1>
+                    </div>
+                    <div class="map-block__text">
+                        <p>Мы тщательно подбираем месторасположение земельных массивов,</p>
+                        <p> чтобы обеспечить будущим жильцам комфортную застройку.</p>
+                    </div>
+                    <div id="map" class="map"></div>
+            
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="contact-form__body">
+                <div class="contact-form__container">
+                    <div class="contact-form__header"><h1>Получите бесплатную консультацию</h1></div>
+                    <div class="contact-form__text">
+                        <p>Закажите бесплатную консультацию и мы свяжемся с вами, чтобы обсудить детали</p>
+                        <p>Или позвоните нам по телефону</p>
+                    </div>
+                    <div class="contact-form__phone">
+                        <p>+7 (915) 747-11-55</p>
+                    </div>
+                    <form class="contact-form__sub" action="">
+                        <input placeholder="Ваше имя" type="text">
+                        <input placeholder="Номер телефона" type="phone">
+                        <button type="submit">Получить консультацию</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="news-block">
+                <div class="news-block__container">
+                    <div class="news-block__header">
+                        <h1>Новости</h1>       
+                    </div>
+                    <div class="news-block__items">
+                        <div class="news-block__item">
+                            <div class="news-block__img"><img src="@img/news_1.jpg" alt=""></div>
+                            <div class="news-block__item-text">
+                                <span>19.06.22</span>
+                                <p>Межевание становится люязательной процедурой или почему всем лучше успеть нанести границы своих земельных участков на кадастровую</p>
+                            </div>
+                        </div>
+                        <div class="news-block__item">
+                            <div class="news-block__img"><img src="@img/news_2.jpg" alt=""></div>
+                            <div class="news-block__item-text">
+                                <span>13.06.22</span>
+                                <p>Проектом строительства предусмотрено устройство транспортной развязки через проспект Калинина</p>
+                            </div>
+                        </div>
+                        <div class="news-block__item">
+                            <div class="news-block__img"><img src="@img/news_3.jpg" alt=""></div>
+                            <div class="news-block__item-text">
+                                <span>08.06.22</span>
+                                <p>Главный суд страны разрешил дачникам и садоводам не спрашивать разрешения у местных чиновников, а также руководителей садовых</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-block__all-news"><a  href="#">ВСЕ НОВОСТИ</a></div>
+                </div>
+            </div>
+        </section>
+</main>
+@@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+</html>
