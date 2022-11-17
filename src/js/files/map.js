@@ -132,7 +132,7 @@
 // 	myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
 // 	myMap.controls.remove('rulerControl'); // удаляем контрол правил
 // 	myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-	
+
 // 	 myMap.geoObjects
 // 	.add(myGeoObject);
 // }
@@ -153,46 +153,58 @@ function init() {
 		// от 0 (весь мир) до 19.
 		zoom: 10
 	});
-	myMap.geoObjects
+	// myMap.geoObjects
 	let savatievo = new ymaps.Placemark([56.837140, 36.104917], {
-	},{
+		balloonContentHeader: '<a href="/home">Саватьево</a>',
+		balloonContentFooter: '+ 7(999) 999-99 - 99',
+		hasBalloon: true,
+		hideIconOnBalloonOpen: true
+	}, {
 		// Опции.
 		//balloonContentHeader: 'Mistoun',
 		//balloonContentBody: 'Москва, Николоямская 40с1',
 		//balloonContentFooter: '+ 7(495) 507-54 - 90',
-		//hasBalloon: true,
-		//hideIconOnBalloonOpen: true,
-
-		hasBalloon: false,
-		hideIconOnBalloonOpen: false,
+		// hasBalloon: true,
+		// hideIconOnBalloonOpen: true,
+		
+		// hasBalloon: false,
+		// hideIconOnBalloonOpen: false,
 		// Необходимо указать данный тип макета.
 		iconLayout: 'default#imageWithContent',
 		// Своё изображение иконки метки.
 		iconImageHref: 'img/icons/metka.svg',
 		// Размеры метки.
-		iconImageSize: [40, 40],
+		iconImageSize: [50, 50],
 		// Смещение левого верхнего угла иконки относительно
 		// её "ножки" (точки привязки).
 		iconImageOffset: [-20, -20],
 		// Смещение слоя с содержимым относительно слоя с картинкой.
 		iconContentOffset: [0, 0],
 	});
-
+	// myMap.balloon.open([56.837140, 36.104917], "Содержимое балуна", {
+    //     // Опция: не показываем кнопку закрытия.
+    //     closeButton: true
+    // });
 	let pribregniy = new ymaps.Placemark([57.003904, 35.7292109], {
-	},{
-		hasBalloon: false,
-		hideIconOnBalloonOpen: false,
+		balloonContentHeader: '<a href="/home">Прибрежный</a>',
+		balloonContentFooter: '+ 7(999) 999-99 - 99',
+		hasBalloon: true,
+		hideIconOnBalloonOpen: true
+	}, {
+		// hasBalloon: false,
+		// hideIconOnBalloonOpen: false,
 		// Необходимо указать данный тип макета.
 		iconLayout: 'default#imageWithContent',
 		// Своё изображение иконки метки.
 		iconImageHref: 'img/icons/metka.svg',
 		// Размеры метки.
-		iconImageSize: [40, 40],
+		iconImageSize: [50, 50],
 		// Смещение левого верхнего угла иконки относительно
 		// её "ножки" (точки привязки).
 		iconImageOffset: [-20, -20],
 		// Смещение слоя с содержимым относительно слоя с картинкой.
 		iconContentOffset: [0, 0],
+		
 	});
 	myMap.geoObjects.add(savatievo);
 	myMap.geoObjects.add(pribregniy);
@@ -206,7 +218,7 @@ function init() {
 	// myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования
 	myMap.controls.remove('rulerControl'); // удаляем контрол правил
 	// myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-	
+
 	//  myMap.geoObjects
 	// .add(myGeoObject);
 }

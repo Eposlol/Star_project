@@ -260,7 +260,8 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 }
 .contact-form__body {
     padding: 100px 0 112px;
-    background-image: linear-gradient( rgba(255, 255, 255, 0.492), rgba(0, 0, 0, 0.8) ), url("@img/consultation_form_bg.jpg");
+    // background-image: linear-gradient( rgba(255, 255, 255, 0.492), rgba(0, 0, 0, 0.8) ), url("@img/consultation_form_bg.jpg");
+    background-image: linear-gradient(rgb(255 255 255 / 0%), rgb(0 0 0)), url(../img/consultation_form_bg.jpg);
     // min-height: 500px; 
     background-attachment: fixed;
     background-position: center center;
