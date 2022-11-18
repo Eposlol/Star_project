@@ -186,6 +186,15 @@
     display: block;
   }
   
+  .menu__mobile-container {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 700px) {
+      justify-content: start;
+      padding-left: 20px;
+    }
+  }
   .toggle-menu {
     background-color: rgba(0, 0, 0, 0.2);
     // position: fixed;
@@ -237,6 +246,9 @@
   
   .nav-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .nav-list-item {

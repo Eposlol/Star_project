@@ -72,7 +72,7 @@
 .header__text { 
 	// grid-area: header__text; 
 	padding: 19px 0 19px 18px;
-	flex: 1 0 auto;
+	flex: 0 1 auto;
 }
 .header__text h2 {
 	font-family: Lifehack;
@@ -93,7 +93,7 @@
 	display: grid;
 	justify-items: end; height: auto; 
 	padding-bottom: 8px;
-	flex: 0 0 auto;
+	flex: 1 0 auto;
 }
 
 
@@ -128,7 +128,7 @@
 	.header__items {
 		display: grid; 
 		grid-template-columns:100%; 
-		grid-template-rows:  130px 100px 60px ; 
+		grid-template-rows:  130px 80px 80px ; 
 		gap: 0px 0px; 
 		grid-template-areas: 
 		  " \header__logo  "

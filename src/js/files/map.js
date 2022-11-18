@@ -151,7 +151,7 @@ function init() {
 		center: [56.8584, 35.9006],
 		// Уровень масштабирования. Допустимые значения:
 		// от 0 (весь мир) до 19.
-		zoom: 10
+		zoom: 9
 	});
 	// myMap.geoObjects
 	let savatievo = new ymaps.Placemark([56.837140, 36.104917], {
