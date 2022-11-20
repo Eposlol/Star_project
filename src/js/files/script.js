@@ -63,6 +63,7 @@ function toggleClass(elem, className) {
 
 theToggle.onclick = function() {
    toggleClass(this, 'on');
+   mobileMenuHeight()
    return false;
 }
 const iPhoneParalax = document.querySelector('.contact-form__body')
@@ -72,3 +73,15 @@ if(navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
     //document.location.reload();
   iPhoneParalax.classList.add('no-iPhone')
 }
+
+const mobileMenuHeight = () => {
+    const headerBlock = document.querySelector('.header__container')
+    const mobileMenuBlock = document.querySelector('.nav-list')
+    const headerHeight = headerBlock.offsetHeight
+    if (!document.querySelector('.menu-body').classList.contains("sticky")) {
+        return mobileMenuBlock.style.height = `calc(100vh - ${headerHeight}px - 50px)`
+    } else {
+        return mobileMenuBlock.style.height = `calc(100vh - 50px)`
+    }
+}
+ 
