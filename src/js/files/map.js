@@ -155,8 +155,9 @@ function init() {
 	});
 	// myMap.geoObjects
 	let savatievo = new ymaps.Placemark([56.837140, 36.104917], {
-		balloonContentHeader: '<a href="/home">Саватьево</a>',
-		balloonContentFooter: '+ 7(999) 999-99 - 99',
+		balloonContentHeader: '<div class="map__header-text"><p>Поселок</p><p>прибрежный</p></div><p class="map__body-text">Цена сотки от 150 000 руб</p><a class="map__footer-btn" href="#">подробнее</a>',
+		balloonContentBody: '',
+		balloonContentFooter: '<div style="height: 20px"></div>',
 		hasBalloon: true,
 		hideIconOnBalloonOpen: true
 	}, {
@@ -186,8 +187,9 @@ function init() {
     //     closeButton: true
     // });
 	let pribregniy = new ymaps.Placemark([57.003904, 35.7292109], {
-		balloonContentHeader: '<a href="/home">Прибрежный</a>',
-		balloonContentFooter: '+ 7(999) 999-99 - 99',
+		balloonContentHeader: '<div class="map__header-text"><p>Саватьевский</p><p>берег</p></div><p class="map__body-text">Цена сотки от 150 000 руб</p><a class="map__footer-btn" href="#">подробнее</a>',
+		balloonContentBody: '',
+		balloonContentFooter: '<div style="height: 20px"></div>',
 		hasBalloon: true,
 		hideIconOnBalloonOpen: true
 	}, {
