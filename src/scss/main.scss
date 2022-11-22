@@ -22,12 +22,25 @@
 background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(4,42,3,0) 100%, rgba(0,212,255,0%) 100%);
 }
 
+.grass__banner .overlay.inside-page {
+  bottom: auto;
+} 
+
 .grass__banner {
     position: relative;
     // min-height: 807px;
     padding-bottom: 209px;
     @include adaptiveValue("padding-bottom", 201, 0, 1980, 995);
+    background-repeat: no-repeat;
+    background-position-y: 27%;
+    background-size: cover;
 }
+
+.grass-content__header  h1.green-background{
+  background-color: #11c05cc4;
+}
+
+
 
 .grass-content__container {
     position: relative;
@@ -58,6 +71,18 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     @include adaptiveValue("line-height", 28, 12, 991, 320);
     @include adaptiveValue("font-size", 24, 12, 1200, 320);
     @include adaptiveValue("margin-top", 64, 50, 1200, 320);
+}
+
+.grass-content__text.shadow-background {
+  padding: 9px 22px;
+  background-color: rgb(1 1 1 / 27%);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 954px;
+  width: auto;
+  margin-bottom: 126px;
+  font-weight: normal;
+  @include adaptiveValue("margin-bottom", 126, 70, 1200, 320);
 }
 
 .grass-content__items {
@@ -548,4 +573,65 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
  
+}
+
+.about {
+  padding: 68px 0 127px;
+  // background-image: url(../img/onjects_bg.jpg);
+  &__container {
+  }
+
+  &__header {
+    font-size: 50px;
+    font-family: Lifehack;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 47px;
+    @include adaptiveValue("font-size", 50,30, 1200, 320);
+    font-weight: 500;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:1146px) {
+      flex-wrap: wrap;
+      
+    }
+  }
+
+  &__item {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    @media (max-width:1146px) {
+      flex: 1 1 50%;
+
+    }
+  }
+
+  &__item-icon {
+    height: 98px;
+    width: 98px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item-text {
+    text-align: center;
+    font-size: 18px;
+    padding: 24px 35px;
+    line-height: 26px;
+    @include adaptiveValue("font-size", 18,12, 1200, 320);
+    @include adaptiveValue("line-height", 26,16, 1200, 320);
+    span {
+      font-weight: bold;
+    }
+  }
+
+  &__video {
+    margin-top: 58px;
+  }
 }
