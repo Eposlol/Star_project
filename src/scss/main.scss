@@ -576,7 +576,7 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 }
 
 .about {
-  padding: 68px 0 127px;
+  padding: 68px 0 125px;
   // background-image: url(../img/onjects_bg.jpg);
   &__container {
   }
@@ -634,4 +634,404 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
   &__video {
     margin-top: 58px;
   }
+}
+
+.benefits {
+  padding: 68px 0 125px;
+   background-image: url(../img/onjects_bg.jpg);
+  &__container {
+  }
+
+  &__header {
+    font-size: 50px;
+    font-family: Lifehack;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 69px;
+    @include adaptiveValue("font-size", 50,30, 1200, 320);
+    font-weight: 500;
+  }
+
+  &__items {
+    // margin-top: 69px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+  }
+
+  &__item {
+    flex: 1 1 48%;
+    height: 222px;
+    display: flex;
+    transition: .3s;
+  }
+
+  &__item:hover {
+    transform: translateY(-7px);
+  }
+ &__item-left {
+  flex: 0 0 98px;
+  height: 222px;
+  background-color: #01b651;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+ }
+  &__item-icon {
+   height: 60px;
+   width: 60px;
+   padding: 1px;
+   background-repeat: no-repeat;
+   background-position: center;
+  }
+
+  &__item-text {
+    flex: 0 1 auto;
+    padding: 41px 20px 41px 67px;
+    background-color: #fff;
+    @media (max-width:991px){
+        padding: 21px 20px 21px 47px;
+    }
+  }
+}
+.text {
+
+  &__block {
+  }
+
+  &__block-header {
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 24px;
+    @include adaptiveValue("font-size", 18,14, 1200, 320);
+  }
+
+  &__block-body {
+    font-size: 17px;
+   line-height: 26px;
+    font-weight: normal;
+    @include adaptiveValue("font-size", 17,12, 1200, 320);
+  }
+}
+
+.tour {
+  padding: 68px 0 125px;
+  &__container {
+  }
+
+  &__header {
+    font-size: 50px;
+    font-family: Lifehack;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 69px;
+    @include adaptiveValue("font-size", 50,30, 1200, 320);
+    font-weight: 500;
+  }
+
+  &__item {
+  }
+}
+
+.plan {
+  padding: 68px 0 125px;
+  background-image: url(../img/onjects_bg.jpg);
+  &__container {
+  }
+
+  &__header {
+    font-size: 50px;
+    font-family: Lifehack;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 69px;
+    @include adaptiveValue("font-size", 50,30, 1200, 320);
+    font-weight: 500;
+  }
+
+  &__map {
+    width: 100%;
+    position: relative;
+    max-width: 1720px;
+    margin: 0 auto;
+    background: url(../img/new_plan.jpg) no-repeat center;
+    height: 765px;
+  }
+}
+.plan .item {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #76cb00;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &_42 {
+    top: 19.8%;
+    left: calc(50% - 450px);
+  }
+
+  &_41 {
+    top: 31.8%;
+    left: calc(50% - 485px);
+  }
+
+  &_40 {
+    top: 42.8%;
+    left: calc(50% - 485px);
+  }
+
+  &_39 {
+    top: 54.8%;
+    left: calc(50% - 475px);
+  }
+
+  &_38 {
+    top: 66.8%;
+    left: calc(50% - 415px);
+  }
+
+  &_37 {
+    top: 75.8%;
+    left: calc(50% - 350px);
+  }
+
+  &_36 {
+    top: 77.8%;
+    left: calc(50% - 255px);
+  }
+
+  &_35 {
+    top: 79.8%;
+    left: calc(50% - 175px);
+  }
+
+  &_34 {
+    top: 79.8%;
+    left: calc(50% - 95px);
+  }
+
+  &_33 {
+    top: 79.8%;
+    left: calc(50% - 25px);
+  }
+
+  &_32 {
+    top: 79.8%;
+    left: calc(50% + 50px);
+  }
+
+  &_31 {
+    top: 79.8%;
+    left: calc(50% + 125px);
+  }
+
+  &_30 {
+    top: 79.8%;
+    left: calc(50% + 200px);
+  }
+
+  &_29 {
+    top: 79.8%;
+    left: calc(50% + 280px);
+  }
+
+  &_28 {
+    top: 79.8%;
+    left: calc(50% + 355px);
+  }
+
+  &_27 {
+    top: 50.8%;
+    left: calc(50% - 230px);
+  }
+
+  &_26 {
+    top: 54.8%;
+    left: calc(50% - 150px);
+  }
+
+  &_25 {
+    top: 56.8%;
+    left: calc(50% - 75px);
+  }
+
+  &_24 {
+    top: 56.8%;
+    left: calc(50% + 5px);
+  }
+
+  &_23 {
+    top: 56.8%;
+    left: calc(50% + 92px);
+  }
+
+  &_22 {
+    top: 56.8%;
+    left: calc(50% + 175px);
+  }
+
+  &_21 {
+    top: 56.8%;
+    left: calc(50% + 255px);
+  }
+
+  &_20 {
+    top: 56.8%;
+    left: calc(50% + 342px);
+  }
+
+  &_19 {
+    top: 37.4%;
+    left: calc(50% - 325px);
+  }
+
+  &_18 {
+    top: 40.4%;
+    left: calc(50% - 265px);
+  }
+
+  &_17 {
+    top: 42.9%;
+    left: calc(50% - 200px);
+  }
+
+  &_16 {
+    top: 46.4%;
+    left: calc(50% - 137px);
+  }
+
+  &_15 {
+    top: 47.8%;
+    left: calc(50% - 70px);
+  }
+
+  &_14 {
+    top: 48.8%;
+    left: calc(50% + 4px);
+  }
+
+  &_13 {
+    top: 48.8%;
+    left: calc(50% + 84px);
+  }
+
+  &_12 {
+    top: 48.8%;
+    left: calc(50% + 174px);
+  }
+
+  &_11 {
+    top: 48.8%;
+    left: calc(50% + 252px);
+  }
+
+  &_10 {
+    top: 48.8%;
+    left: calc(50% + 328px);
+  }
+
+  &_9 {
+    top: 15.2%;
+    left: calc(50% - 385px);
+  }
+
+  &_8 {
+    top: 15.5%;
+    left: calc(50% - 265px);
+  }
+
+  &_7 {
+    top: 17.4%;
+    left: calc(50% - 190px);
+  }
+
+  &_6 {
+    top: 21.4%;
+    left: calc(50% - 103px);
+  }
+
+  &_5 {
+    top: 24.9%;
+    left: calc(50% - 30px);
+  }
+
+  &_4 {
+    top: 24.9%;
+    left: calc(50% + 37px);
+  }
+
+  &_3 {
+    top: 24.9%;
+    left: calc(50% + 117px);
+  }
+
+  &_2 {
+    top: 24.9%;
+    left: calc(50% + 197px);
+  }
+
+  &_1 {
+    top: 24.9%;
+    left: calc(50% + 265px);
+  }
+}
+.hide {
+  position: absolute;
+    display: none;
+    z-index: 3;
+}
+.item:hover .hide {
+  display: block;
+    width: 260px;
+    height: 150px;
+    box-shadow: 0 10px 45px rgb(17 22 27 / 20%);
+    border-radius: 10px;
+    background-color: #ffffff;
+    top: -150px;
+    left: calc(50% - 130px);
+    padding: 30px 40px;
+    text-align: center;
+}
+.plan .item.gray {
+  background-color: #fa3336;
+}
+.plan .item.red {
+  background-color: #ead629;
+}
+
+.plan .item p {
+  color: #f8f6f2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+}
+
+.plan .item .hide p {
+  color: #212121;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.plan .item .hide p span {
+  font-family: "Muller Bold";
+  color: #75a635;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.plan .item.red .hide span {
+  color: #ead629;
+}
+
+.plan .item.gray .hide span {
+  color: #fa3336;
 }
