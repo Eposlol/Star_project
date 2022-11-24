@@ -155,7 +155,7 @@ function init() {
 	});
 	// myMap.geoObjects
 	let savatievo = new ymaps.Placemark([56.837140, 36.104917], {
-		balloonContentHeader: '<div class="map__header-text"><p>Поселок</p><p>прибрежный</p></div><p class="map__body-text">Цена сотки от 150 000 руб</p><a class="map__footer-btn" href="#">подробнее</a>',
+		balloonContentHeader: '<div class="map__header-text"><p>Поселок</p><p>прибрежный</p></div><p class="map__body-text">Цена сотки от 150 000 руб</p><a class="map__footer-btn" href="pribregniy.html">подробнее</a>',
 		balloonContentBody: '',
 		balloonContentFooter: '<div style="height: 20px"></div>',
 		hasBalloon: true,

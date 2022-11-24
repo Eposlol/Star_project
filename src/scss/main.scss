@@ -753,6 +753,16 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     font-weight: 500;
   }
 
+  img {
+    width: 100%;
+    margin-bottom: -4px;
+    display: none;
+    @media screen and (max-width: 1024px)
+{
+    display: block;
+}
+}
+
   &__map {
     width: 100%;
     position: relative;
@@ -760,6 +770,11 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     margin: 0 auto;
     background: url(../img/new_plan.jpg) no-repeat center;
     height: 765px;
+    @media screen and (max-width: 1024px)
+         {
+    background: none;
+    height: auto;
+    }
   }
 }
 .plan .item {
@@ -771,6 +786,44 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
   display: flex;
   justify-content: center;
   flex-direction: column;
+  cursor: pointer;
+  @media screen and (max-width: 1024px)
+   {
+      zoom: 0.8;
+  }
+  @media (max-width: 970.98px)
+  {
+      zoom: 0.7;
+  }
+  @media (max-width: 820.98px)
+  {
+     zoom: 0.6;
+ }
+ @media screen and (max-width: 700.98px)
+  {
+      zoom: 0.5;
+  }
+  @media screen and (max-width: 574.98px)
+  {
+      zoom: 0.4;
+  }
+  @media screen and (max-width: 458.98px)
+  {
+     zoom: 0.35;
+ }
+ @media screen and (max-width: 420.98px)
+ {
+      zoom: 0.3;
+  }
+  @media screen and (max-width: 354.98px)
+   {
+      zoom: 0.25;
+  }
+  
+ 
+
+ 
+ 
 
   &_42 {
     top: 19.8%;
@@ -1034,4 +1087,91 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 
 .plan .item.gray .hide span {
   color: #fa3336;
+}
+
+// фотогаллерея
+
+.gallery {
+  padding: 68px 0 125px;
+  &__container {
+  }
+
+  &__header {
+    font-size: 50px;
+    font-family: Lifehack;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 69px;
+    @include adaptiveValue("font-size", 50,30, 1200, 320);
+    font-weight: 500;
+  }
+
+  &__slider {
+    height: 640px;
+    @include adaptiveValue("height", 640, 320, 1200, 320);
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    position: relative;
+    cursor: pointer;
+    img {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.mini-gallery {
+ 
+  &__slider {
+    margin-top: 15px;
+  }
+
+  &__image {
+
+  }
+
+  &__wrapper {
+
+  }
+  
+  &__slide {
+    position: relative;
+    padding: 0 0 10% 0;
+    @include adaptiveValue("padding-bottom", 117, 60, 1200, 320);
+    cursor: pointer;
+   
+    img {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 5px;
+    }
+   
+  }
+  &__slide.swiper-slide-thumb-active:after {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    border: 1px solid #fff;
+    margin: 5px;
+  } 
 }
