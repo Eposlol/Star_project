@@ -8,13 +8,13 @@
 
 .menu-body li {
   list-style-type: none; 
-  margin: 0 5px;
-  padding: 11px 0px;
-  :hover{
-    background-color: #ebebeb33;
-  }
- }
+  // margin: 0 5px;
+  padding: 0px 5px;
 
+ }
+ .menu-body li:hover{
+  background-color: #ebebeb33;
+}
 
 
 .menu__container {

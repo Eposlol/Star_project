@@ -6,12 +6,12 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221123202305">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221124230309">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Yandex map (start)-->
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=65650f92-0a48-433f-b311-8bd7a99a718e&_v=20221123202305" type="text/javascript"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=65650f92-0a48-433f-b311-8bd7a99a718e&_v=20221124230309" type="text/javascript"></script>
 	<!-- Yandex map (end)-->
 </head>
 
@@ -475,26 +475,32 @@
 						<!-- Оболочка слайдера -->
 						<div class="gallery__slider swiper">
 							<!-- Двигающееся часть слайдера -->
-							<div class="gallery__wrapper swiper-wrapper">
+							<div data-gallery class="gallery__wrapper swiper-wrapper">
 								<!-- Слайд -->
-								<div class="gallery__slide swiper-slide">
+								<a class="gallery__slide swiper-slide" data-src="img/photogallery/1.jpg ">
 									<picture><source srcset="img/photogallery/1.webp" type="image/webp"><img src="img/photogallery/1.jpg" alt=""></picture>
-								</div>
-								<div class="gallery__slide swiper-slide">
+								</a>
+								<a class="gallery__slide swiper-slide" data-src="img/photogallery/2.jpg ">
 									<picture><source srcset="img/photogallery/2.webp" type="image/webp"><img src="img/photogallery/2.jpg" alt=""></picture>
-								</div>
-								<div class="gallery__slide swiper-slide">
+								</a>
+								<a class="gallery__slide swiper-slide" data-src="img/photogallery/3.jpg ">
 									<picture><source srcset="img/photogallery/3.webp" type="image/webp"><img src="img/photogallery/3.jpg" alt=""></picture>
-								</div>
-								<div class="gallery__slide swiper-slide">
+								</a>
+								<a class="gallery__slide swiper-slide" data-src="img/photogallery/4.jpg ">
 									<picture><source srcset="img/photogallery/4.webp" type="image/webp"><img src="img/photogallery/4.jpg" alt=""></picture>
-								</div>
-								<div class="gallery__slide swiper-slide">
+								</a>
+								<a class="gallery__slide swiper-slide" data-src="img/photogallery/5.jpg ">
 									<picture><source srcset="img/photogallery/5.webp" type="image/webp"><img src="img/photogallery/5.jpg" alt=""></picture>
-								</div>
-								<div class="gallery__slide swiper-slide">
+								</a>
+								<a class="gallery__slide swiper-slide" href="img/photogallery/6.jpg ">
 									<picture><source srcset="img/photogallery/6.webp" type="image/webp"><img src="img/photogallery/6.jpg" alt=""></picture>
-								</div>
+								</a>
+								<a class="gallery__slide swiper-slide" href="img/consultation_form_bg.jpg">
+									<picture><source srcset="img/consultation_form_bg.webp" type="image/webp"><img src="img/consultation_form_bg.jpg" alt=""></picture>
+								</a>
+								<a class="gallery__slide swiper-slide" href="img/map.jpg">
+									<picture><source srcset="img/map.webp" type="image/webp"><img src="img/map.jpg" alt=""></picture>
+								</a>
 							</div>
 
 							<!-- Если нужна навигация (влево/вправо) -->
@@ -524,6 +530,12 @@
 								</div>
 								<div class="mini-gallery__slide swiper-slide">
 									<picture><source srcset="img/photogallery/6.webp" type="image/webp"><img src="img/photogallery/6.jpg" alt=""></picture>
+								</div>
+								<div class="mini-gallery__slide swiper-slide" href="img/consultation_form_bg.jpg">
+									<picture><source srcset="img/consultation_form_bg.webp" type="image/webp"><img src="img/consultation_form_bg.jpg" alt=""></picture>
+								</div>
+								<div class="mini-gallery__slide swiper-slide" href="img/map.jpg">
+									<picture><source srcset="img/map.webp" type="image/webp"><img src="img/map.jpg" alt=""></picture>
 								</div>
 							</div>
 						</div>
@@ -571,7 +583,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221123202305" async></script>
+	<script src="js/app.min.js?_v=20221124230309" async></script>
 </body>
 
 </html>

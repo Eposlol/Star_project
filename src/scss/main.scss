@@ -281,14 +281,13 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 }
 
 .ymaps-2-1-79-balloon__layout {
-  padding: 15px 35px;
+  padding: 11px 5px 0px 24px;
   border: 1px solid #c0c0c0
 }
 
-// .ymaps-2-1-79-balloon__close-button {
-//   position: absolute;
-//   top: -20px;
-// }
+.ymaps-2-1-79-balloon__close-button {
+  height: 15px;
+}
 
 .ymaps-2-1-79-balloon, .ymaps-2-1-79-balloon-overlay,.ymaps-2-1-79-balloon__layout  {
   border-radius: 5px;
@@ -778,6 +777,7 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
   }
 }
 .plan .item {
+  font-family: 'MullerExtraBold';
   position: absolute;
   width: 48px;
   height: 48px;
@@ -1075,7 +1075,6 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 }
 
 .plan .item .hide p span {
-  font-family: "Muller Bold";
   color: #75a635;
   font-size: 24px;
   font-weight: 700;
@@ -1174,4 +1173,12 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     border: 1px solid #fff;
     margin: 5px;
   } 
+}
+
+.ymaps-2-1-79-balloon__tail {
+  box-shadow: none;
+}
+
+.lg-backdrop {
+  background-color: #000000d6;
 }

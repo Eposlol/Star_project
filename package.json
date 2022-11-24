@@ -46,7 +46,7 @@
 		"gulp-zip": "latest",
 		"html-webpack-plugin": "latest",
 		"inputmask": "latest",
-		"lightgallery": "latest",
+		"lightgallery": "^2.7.0",
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "2.4.7",
 		"nouislider": "latest",
@@ -70,6 +70,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"photoswipe": "^5.3.4",
 		"simplebar": "latest"
 	}
 }

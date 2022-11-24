@@ -6754,7 +6754,7 @@
         }
     }), 0);
     /*!
- * lightgallery | 2.5.0 | June 13th 2022
+ * lightgallery | 2.7.0 | October 9th 2022
  * http://www.lightgalleryjs.com/
  * Copyright (c) 2020 Sachin Neravath;
  * @license GPLv3
@@ -8102,21 +8102,21 @@ PERFORMANCE OF THIS SOFTWARE.
                 this.$inner.on("touchstart.lg", (function(e) {
                     _this.dragOrSwipeEnabled = true;
                     var $item = _this.getSlideItem(_this.index);
-                    if (($LG(e.target).hasClass("lg-item") || $item.get().contains(e.target)) && !_this.outer.hasClass("lg-zoomed") && !_this.lgBusy && 1 === e.targetTouches.length) {
+                    if (($LG(e.target).hasClass("lg-item") || $item.get().contains(e.target)) && !_this.outer.hasClass("lg-zoomed") && !_this.lgBusy && 1 === e.touches.length) {
                         isSwiping = true;
                         _this.touchAction = "swipe";
                         _this.manageSwipeClass();
                         startCoords = {
-                            pageX: e.targetTouches[0].pageX,
-                            pageY: e.targetTouches[0].pageY
+                            pageX: e.touches[0].pageX,
+                            pageY: e.touches[0].pageY
                         };
                     }
                 }));
                 this.$inner.on("touchmove.lg", (function(e) {
-                    if (isSwiping && "swipe" === _this.touchAction && 1 === e.targetTouches.length) {
+                    if (isSwiping && "swipe" === _this.touchAction && 1 === e.touches.length) {
                         endCoords = {
-                            pageX: e.targetTouches[0].pageX,
-                            pageY: e.targetTouches[0].pageY
+                            pageX: e.touches[0].pageX,
+                            pageY: e.touches[0].pageY
                         };
                         _this.touchMove(startCoords, endCoords, e);
                         isMoved = true;
@@ -8446,16 +8446,16 @@ PERFORMANCE OF THIS SOFTWARE.
             this.updateCounterTotal();
             this.manageSingleSlideClassName();
         };
+        LightGallery.prototype.destroyGallery = function() {
+            this.destroyModules(true);
+            if (!this.settings.dynamic) this.invalidateItems();
+            $LG(window).off(".lg.global" + this.lgId);
+            this.LGel.off(".lg");
+            this.$container.remove();
+        };
         LightGallery.prototype.destroy = function() {
-            var _this = this;
             var closeTimeout = this.closeGallery(true);
-            setTimeout((function() {
-                _this.destroyModules(true);
-                if (!_this.settings.dynamic) _this.invalidateItems();
-                $LG(window).off(".lg.global" + _this.lgId);
-                _this.LGel.off(".lg");
-                _this.$container.remove();
-            }), closeTimeout);
+            if (closeTimeout) setTimeout(this.destroyGallery.bind(this), closeTimeout); else this.destroyGallery();
             return closeTimeout;
         };
         return LightGallery;
@@ -8472,7 +8472,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 gallery,
                 galleryClass: lightgallery_es5(gallery, {
                     licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
-                    speed: 500
+                    speed: 500,
+                    download: false
                 })
             });
         }));
@@ -8682,7 +8683,7 @@ PERFORMANCE OF THIS SOFTWARE.
             center: [ 56.8584, 35.9006 ],
             zoom: 9
         });
-        let savatievo = new ymaps.Placemark([ 56.83714, 36.104917 ], {
+        let savatievo = new ymaps.Placemark([ 57.003904, 35.7292109 ], {
             balloonContentHeader: '<div class="map__header-text"><p>Поселок</p><p>прибрежный</p></div><p class="map__body-text">Цена сотки от 150 000 руб</p><a class="map__footer-btn" href="pribregniy.html">подробнее</a>',
             balloonContentBody: "",
             balloonContentFooter: '<div style="height: 20px"></div>',
@@ -8695,7 +8696,7 @@ PERFORMANCE OF THIS SOFTWARE.
             iconImageOffset: [ -20, -20 ],
             iconContentOffset: [ 0, 0 ]
         });
-        let pribregniy = new ymaps.Placemark([ 57.003904, 35.7292109 ], {
+        let pribregniy = new ymaps.Placemark([ 56.83714, 36.104917 ], {
             balloonContentHeader: '<div class="map__header-text"><p>Саватьевский</p><p>берег</p></div><p class="map__body-text">Цена сотки от 150 000 руб</p><a class="map__footer-btn" href="#">подробнее</a>',
             balloonContentBody: "",
             balloonContentFooter: '<div style="height: 20px"></div>',

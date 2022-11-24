@@ -1,9 +1,25 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: Roboto-italic;
+  font-family: Lifehack;
+  font-display: swap;
+  src: url("../fonts/Lifehack.woff2") format("woff2"), url("../fonts/Lifehack.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
   font-display: swap;
   src: url("../fonts/Roboto-italic.woff2") format("woff2"), url("../fonts/Roboto-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: MullerExtraBold;
+  font-display: swap;
+  src: url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -12,14 +28,6 @@
   font-family: Roboto;
   font-display: swap;
   src: url("../fonts/Roboto.woff2") format("woff2"), url("../fonts/Roboto.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Lifehack;
-  font-display: swap;
-  src: url("../fonts/Lifehack.woff2") format("woff2"), url("../fonts/Lifehack.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -205,6 +213,59 @@ main h1 {
 html {
   height: 100%;
   min-height: 100%;
+}
+
+.tipical__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+}
+
+.tipical__gallery-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 262px;
+          flex: 0 1 262px;
+  height: 171px;
+  min-width: 150px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tipical__gallery-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.tipical__gallery-item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #fff;
+  margin: 8px;
+}
+
+.tipical__btn {
+  padding: 16px 55px;
+  border-radius: 5px;
+  background-color: #fac23a;
+}
+
+.tipical__btn :hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 /*
@@ -471,11 +532,10 @@ footer {
 
 .menu-body li {
   list-style-type: none;
-  margin: 0 5px;
-  padding: 11px 0px;
+  padding: 0px 5px;
 }
 
-.menu-body li :hover {
+.menu-body li:hover {
   background-color: rgba(235, 235, 235, 0.2);
 }
 
@@ -1178,8 +1238,12 @@ footer {
 }
 
 .ymaps-2-1-79-balloon__layout {
-  padding: 15px 35px;
+  padding: 11px 5px 0px 24px;
   border: 1px solid #c0c0c0;
+}
+
+.ymaps-2-1-79-balloon__close-button {
+  height: 15px;
 }
 
 .ymaps-2-1-79-balloon,
@@ -1828,6 +1892,7 @@ input::placeholder {
 }
 
 .plan .item {
+  font-family: "MullerExtraBold";
   position: absolute;
   width: 48px;
   height: 48px;
@@ -2100,7 +2165,6 @@ input::placeholder {
 }
 
 .plan .item .hide p span {
-  font-family: "Muller Bold";
   color: #75a635;
   font-size: 24px;
   font-weight: 700;
@@ -2212,6 +2276,15 @@ input::placeholder {
   bottom: 0;
   border: 1px solid #fff;
   margin: 5px;
+}
+
+.ymaps-2-1-79-balloon__tail {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.8392156863);
 }
 
 .swiper {
