@@ -38,6 +38,7 @@ function initSliders() {
 			spaceBetween: 10,
 			slidesPerView: 6,
 			freeMode: true,
+			speed:300,
 			watchSlidesProgress: true,
 			breakpoints: {
 				320: {
@@ -60,9 +61,10 @@ function initSliders() {
 			//   nextEl: ".swiper-button-next",
 			//   prevEl: ".swiper-button-prev",
 			// },
-			
+			speed:600,
 			thumbs: {
 			  swiper: thumbsSlider,
+			  autoScrollOffset: 1,
 			},
 		  });
 	

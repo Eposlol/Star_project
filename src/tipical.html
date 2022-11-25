@@ -5,9 +5,9 @@
 <div class="wrapper" data-sticky>
 @@include('html/_header.htm',{})
 @@include('html/_menu.htm',{})
-<main class="page">
+<main class="tipical">
     <div class="__container">
-   <div class="breadcrumbs"><p>Главная</p> > <p>Типовая страница</p></div>
+   <div class="tipical__breadcrumbs"><a href="index.html">Главная</a><a href="#">Типовая страница</a></div>
    <div class="tipical__header"><h2>Типовая страница</h2></div>
    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis iusto cum aspernatur facere nesciunt, 
     iure eaque voluptatibus quibusdam, optio quos, ullam sequi laborum natus! Dolorem excepturi soluta asperiores 
@@ -43,7 +43,24 @@
             <img src="@img/photogallery/9.jpg" alt=""/>
         </a>
      </div>
-            <a class="tipical__btn" href="#">Все новости</a>
+            <a class="tipical__btn" href="#">Все новости</a> 
+        <div class="tipical__select-wrapper">
+            <!-- <select name="select-name" id="" class="tipical__select">
+                <option value="1">Выбор пункта</option>
+                <option value="2">Выбор пункта</option>
+                <option value="3">Выбор пункта</option>
+                <option value="4">Выбор пункта</option>
+                <option value="5">Выбор пункта</option>
+            </select> -->
+            <select name="form[]" class="form tipical__select">
+                <option value="1" selected>Пункт №1</option>
+                <option value="2">Пункт №2</option>
+                <option value="3">Пункт №3</option>
+                <option value="4">Пункт №4</option>
+            </select>
+        </div>
+
+       
         </div>
 </main>
 @@include('html/_footer.htm',{})

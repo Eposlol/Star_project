@@ -74,17 +74,21 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 }
 
 .grass-content__text.shadow-background {
-  padding: 9px 22px;
-  background-color: rgb(1 1 1 / 27%);
-  margin-left: auto;
-  margin-right: auto;
   max-width: 954px;
   width: auto;
+  padding: 0;
   margin-bottom: 126px;
   font-weight: normal;
   @include adaptiveValue("margin-bottom", 126, 70, 1200, 320);
 }
-
+.grass-content__text.shadow-background p {
+  background-color: rgb(1 1 1 / 27%);
+  padding: 10px 22px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  line-height: 0.7;
+}
 .grass-content__items {
     display: flex;
     flex-wrap: wrap;
