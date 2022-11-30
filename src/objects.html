@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{"title":"Объекты"})
+<body>
+<div class="wrapper" data-sticky>
+@@include('html/_header.htm',{})
+@@include('html/_menu.htm',{})
+<main class="tipical">
+        <section>
+            <div class="objects">
+                <div class="objects__container">
+                    <div class="tipical__breadcrumbs"><a href="index.html">Главная</a><a href="#">Наши объекты</a></div>
+                    <div class="tipical__header"><h2>Наши объекты</h2></div>
+                        <div class="objects__items">
+                            <a href="#" class="objects__item" >
+                                <div class="objects__item-bg" style="background-image: url(@img/savatievskiu_bereg.jpg)"></div>
+                                <div class="objects__item-text">
+                                    <p>Саватьевский</p>
+                                    <p>берег</p>
+                                </div>
+                            </a>
+                
+                            <a href="pribregniy.html" class="objects__item" >
+                                <div class="objects__item-bg" style="background-image: url(@img/poselok_pribregniy.jpg);"></div>
+                                <div class="objects__item-text">
+                                    <p>Поселок</p>
+                                    <p>прибрежный</p>
+                                </div>
+                            </a>
+                            <a href="#" class="objects__item" >
+                                <div class="objects__item-bg" style="background-image: url(@img/savatievskiu_bereg.jpg)"></div>
+                                <div class="objects__item-text">
+                                    <p>Саватьевский</p>
+                                    <p>берег</p>
+                                </div>
+                            </a>
+                
+                            <a href="pribregniy.html" class="objects__item" >
+                                <div class="objects__item-bg" style="background-image: url(@img/poselok_pribregniy.jpg);"></div>
+                                <div class="objects__item-text">
+                                    <p>Поселок</p>
+                                    <p>прибрежный</p>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="map-block">
+                <div class="map-block__container">
+                    <div class="map-block__header">
+                        <h1>Выбирайте где Вы хотите строить свой дом</h1>
+                    </div>
+                    <div class="map-block__text">
+                        <p>Мы тщательно подбираем месторасположение земельных массивов,<br>
+                        чтобы обеспечить будущим жильцам комфортную застройку.</p>
+                    </div>
+                    <div id="map" class="map"></div>
+                </div>
+            </div>
+        </section>
+</main>
+@@include('html/_footer.htm',{})
+</div>
+@@include('html/_popup.htm',{})
+@@include('html/_js.htm',{})
+</body>
+</html>

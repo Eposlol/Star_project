@@ -264,6 +264,7 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     position: absolute;
     left: 15px;
     z-index: 4;
+    text-align: center;
     top: 15px;
     right: 15px;
     bottom: 15px;
@@ -282,6 +283,21 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     z-index: 5;
     @include adaptiveValue("font-size", 20,14, 1200, 320 );
 }
+
+.objects__item-text span {
+  color: #fff;
+  background-color: #01b651;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: auto;
+  width: fit-content;
+  z-index: 5;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  @include adaptiveValue("font-size", 20,14, 1200, 320 );
+}
 .map-block {
     padding: 75px 0 108px;
 }
@@ -295,10 +311,12 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 }
 
 .map__header-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  text-align: center;
+  max-width: 177px;
 }
 
 .ymaps-2-1-79-balloon__layout {
@@ -323,6 +341,22 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
   text-transform: uppercase;
   margin: auto;
   z-index: 5;
+}
+
+.map__header-text span{
+  color: #fff;
+  background-color: #01b651;
+  padding: 4px 13px;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+  width: fit-content;
+  z-index: 5;
+  -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .map__body-text {
@@ -653,6 +687,9 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 
   &__video {
     margin-top: 58px;
+    iframe {
+      @include adaptiveValue("height", 650,300, 1200, 320);
+    }
   }
 }
 
@@ -734,7 +771,7 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     font-size: 17px;
    line-height: 26px;
     font-weight: normal;
-    @include adaptiveValue("font-size", 17,12, 1200, 320);
+    @include adaptiveValue("font-size", 17,10, 1200, 320);
   }
 }
 
@@ -753,7 +790,8 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
     font-weight: 500;
   }
 
-  &__item {
+  &__item iframe{
+    @include adaptiveValue("height", 700,300, 1200, 320);
   }
 }
 
@@ -1202,4 +1240,13 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
 
 .lg-backdrop {
   background-color: #000000d6;
+}
+
+.lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+  border-color: #01b651;
+}
+
+.tipical .objects {
+  margin: 0;
+  padding-top: 1px;
 }
