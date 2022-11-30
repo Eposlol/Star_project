@@ -66,13 +66,14 @@ theToggle.onclick = function() {
    mobileMenuHeight()
    return false;
 }
+
 const iPhoneParalax = document.querySelector('.contact-form__body')
-if(navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+if(iPhoneParalax != null) {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
     iPhoneParalax.classList.add('iPhone')
-} else {
-    //document.location.reload();
-  iPhoneParalax.classList.add('no-iPhone')
-}
+    } else {
+    iPhoneParalax.classList.add('no-iPhone')
+}}
 
 const mobileMenuHeight = () => {
     const headerBlock = document.querySelector('.header__container')
