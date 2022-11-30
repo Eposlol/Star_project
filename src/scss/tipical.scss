@@ -40,14 +40,24 @@
         grid-row-gap:30px;
         grid-column-gap: 30px;
         margin: 50px 0;
+        flex-wrap: wrap;
+        @media (max-width:$tablet){
+            justify-content: start;
+        }
+        @media (max-width:$mobile){
+            justify-content: center;
+        }
     }
 
     &__gallery-item {
-        flex: 0 1 262px;
+        flex: 1 1 262px;
         height: 171px;
+        max-width: 400px;
         min-width: 150px;
         position: relative;
         cursor: pointer;
+        overflow: hidden;
+        flex-shrink: 1;
         img {
             object-fit: cover;
       position: absolute;
@@ -55,7 +65,29 @@
       height: 100%;
       top: 0;
       left: 0;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      filter: brightness(0.7);
+    //   display: none;
         }
+        // &:hover .item-gallery__background {
+        //     -ms-transform: scale(1.05);
+        //         -moz-transform: scale(1.05);
+        //         -webkit-transform: scale(1.05);
+        //         -o-transform: scale(1.05);
+        //         transform: scale(1.05);
+        //         filter: brightness(1);
+        //   }
+          &:hover img {
+            -ms-transform: scale(1.05);
+                -moz-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                -o-transform: scale(1.05);
+                transform: scale(1.05);
+                filter: brightness(1);
+          }
     }
 
     &__gallery-item:after {
@@ -68,6 +100,23 @@
           border: 2px solid #fff;
           margin: 8px;
     }
+
+    // .item-gallery {
+    //     &__background {
+    //         height: 100%;
+    //         width: 100%;
+    //         background-size: cover;
+    //         background-repeat: no-repeat;
+    //         -webkit-transition: all 0.5s;
+    //         -moz-transition: all 0.5s;
+    //         -o-transition: all 0.5s;
+    //         transition: all 0.5s;
+    //         padding: 15px;
+    //         background-position-y: center;
+    //         filter: brightness(0.7);
+    //     }
+    // }
+
     &__btn {
         padding: 16px 55px;
         border-radius: 5px;
@@ -259,7 +308,7 @@ input[type=text] {
         background-color: #e5e5e5;
         display: block;
         width: 53px;
-        height: 57px;
+        height: 59px;
         border-radius:0 5px 5px 0 ;
         pointer-events: none;
         }

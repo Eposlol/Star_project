@@ -89,6 +89,23 @@ background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(4,49,13,1) 0%, rgba(
   width: fit-content;
   line-height: 0.7;
 }
+
+.grass-content__text.shadow-background span {
+  background-color: rgba(1, 1, 1, 0.27);
+  padding: 2px 22px;
+  margin-left: auto;
+  /* padding: 2px 22px 2px 22px; */
+  margin-right: auto;
+  width: fit-content;
+  text-align: center;
+  line-height: 1.36;
+  /* box-shadow: -22px 0 0 rgb(1 1 1 / 27%), 22px 0 0 rgb(1 1 1 / 27%); */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  @media (max-width: $tablet){
+    padding: 1px 22px;
+  }
+}
 .grass-content__items {
     display: flex;
     flex-wrap: wrap;
